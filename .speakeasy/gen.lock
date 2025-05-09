@@ -7,9 +7,9 @@ management:
   generationVersion: 2.597.9
   releaseVersion: 0.21.2
   configChecksum: 9b887a3b269025f2afc6ff5be933ce43
-  repoURL: https://github.com/LukeHagar/plexgo.git
+  repoURL: https://github.com/unfaiyted/plexgo.git
   repoSubDirectory: .
-  installationURL: https://github.com/LukeHagar/plexgo
+  installationURL: https://github.com/unfaiyted/plexgo
   published: true
 features:
   go:

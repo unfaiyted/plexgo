@@ -35,7 +35,7 @@ package main
 
 import(
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 
@@ -93,7 +93,7 @@ package main
 
 import(
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 
@@ -147,7 +147,7 @@ package main
 
 import(
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 

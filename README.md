@@ -1,4 +1,4 @@
-# github.com/LukeHagar/plexgo
+# github.com/unfaiyted/plexgo
 
 <div align="left">
     <a href="https://speakeasyapi.dev/"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
@@ -24,24 +24,24 @@ Automation and SDKs provided by [Speakeasy](https://speakeasyapi.dev/)
 
 ## SDKs
 
-The following SDKs are generated from the OpenAPI Specification. They are automatically generated and may not be fully tested. If you find any issues, please open an issue on the [main specification Repository](https://github.com/LukeHagar/plex-api-spec).
+The following SDKs are generated from the OpenAPI Specification. They are automatically generated and may not be fully tested. If you find any issues, please open an issue on the [main specification Repository](https://github.com/unfaiyted/plex-api-spec).
 
 | Language              | Repository                                        | Releases                                                                                         | Other                                                   |
 | --------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| Python                | [GitHub](https://github.com/LukeHagar/plexpy)     | [PyPI](https://pypi.org/project/plex-api-client/)                                                | -                                                       |
-| JavaScript/TypeScript | [GitHub](https://github.com/LukeHagar/plexjs)     | [NPM](https://www.npmjs.com/package/@lukehagar/plexjs) \ [JSR](https://jsr.io/@lukehagar/plexjs) | -                                                       |
-| Go                    | [GitHub](https://github.com/LukeHagar/plexgo)     | [Releases](https://github.com/LukeHagar/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/LukeHagar/plexgo) |
-| Ruby                  | [GitHub](https://github.com/LukeHagar/plexruby)   | [Releases](https://github.com/LukeHagar/plexruby/releases)                                       | -                                                       |
-| Swift                 | [GitHub](https://github.com/LukeHagar/plexswift)  | [Releases](https://github.com/LukeHagar/plexswift/releases)                                      | -                                                       |
-| PHP                   | [GitHub](https://github.com/LukeHagar/plexphp)    | [Releases](https://github.com/LukeHagar/plexphp/releases)                                        | -                                                       |
-| Java                  | [GitHub](https://github.com/LukeHagar/plexjava)   | [Releases](https://github.com/LukeHagar/plexjava/releases)                                       | -                                                       |
-| C#                    | [GitHub](https://github.com/LukeHagar/plexcsharp) | [Releases](https://github.com/LukeHagar/plexcsharp/releases)                                     | -
+| Python                | [GitHub](https://github.com/unfaiyted/plexpy)     | [PyPI](https://pypi.org/project/plex-api-client/)                                                | -                                                       |
+| JavaScript/TypeScript | [GitHub](https://github.com/unfaiyted/plexjs)     | [NPM](https://www.npmjs.com/package/@lukehagar/plexjs) \ [JSR](https://jsr.io/@lukehagar/plexjs) | -                                                       |
+| Go                    | [GitHub](https://github.com/unfaiyted/plexgo)     | [Releases](https://github.com/unfaiyted/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/unfaiyted/plexgo) |
+| Ruby                  | [GitHub](https://github.com/unfaiyted/plexruby)   | [Releases](https://github.com/unfaiyted/plexruby/releases)                                       | -                                                       |
+| Swift                 | [GitHub](https://github.com/unfaiyted/plexswift)  | [Releases](https://github.com/unfaiyted/plexswift/releases)                                      | -                                                       |
+| PHP                   | [GitHub](https://github.com/unfaiyted/plexphp)    | [Releases](https://github.com/unfaiyted/plexphp/releases)                                        | -                                                       |
+| Java                  | [GitHub](https://github.com/unfaiyted/plexjava)   | [Releases](https://github.com/unfaiyted/plexjava/releases)                                       | -                                                       |
+| C#                    | [GitHub](https://github.com/unfaiyted/plexcsharp) | [Releases](https://github.com/unfaiyted/plexcsharp/releases)                                     | -
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [github.com/LukeHagar/plexgo](#githubcomlukehagarplexgo)
+* [github.com/unfaiyted/plexgo](#githubcomlukehagarplexgo)
 * [Plex Media Server OpenAPI Specification](#plex-media-server-openapi-specification)
   * [Documentation](#documentation)
   * [SDKs](#sdks)
@@ -65,7 +65,7 @@ The following SDKs are generated from the OpenAPI Specification. They are automa
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/LukeHagar/plexgo
+go get github.com/unfaiyted/plexgo
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -79,7 +79,7 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 
@@ -274,8 +274,8 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/retry"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/retry"
 	"log"
 	"models/operations"
 )
@@ -314,8 +314,8 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/retry"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/retry"
 	"log"
 )
 
@@ -372,8 +372,8 @@ package main
 import (
 	"context"
 	"errors"
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/models/sdkerrors"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/models/sdkerrors"
 	"log"
 )
 
@@ -430,7 +430,7 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 
@@ -463,7 +463,7 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 
@@ -494,8 +494,8 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/models/operations"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/models/operations"
 	"log"
 )
 
@@ -564,7 +564,7 @@ package main
 
 import (
 	"context"
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"log"
 )
 

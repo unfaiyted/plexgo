@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/LukeHagar/plexgo/types"
+	"github.com/unfaiyted/plexgo/types"
 
 	"github.com/ericlagergren/decimal"
 )

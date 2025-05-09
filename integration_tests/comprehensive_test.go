@@ -7,7 +7,7 @@ import (
 	"time"
 	"strconv"
 
-	"github.com/LukeHagar/plexgo/integration_tests/internal"
+	"github.com/unfaiyted/plexgo/integration_tests/internal"
 )
 
 func TestComprehensiveCollectionWorkflow(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/integration_tests/internal"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/integration_tests/internal"
 )
 
 // These tests are designed to be run against a real Plex server.

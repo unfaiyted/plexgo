@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 	"github.com/joho/godotenv"
 )
 

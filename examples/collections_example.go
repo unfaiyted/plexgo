@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/LukeHagar/plexgo"
+	"github.com/unfaiyted/plexgo"
 )
 
 func main() {

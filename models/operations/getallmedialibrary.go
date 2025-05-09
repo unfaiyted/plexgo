@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/LukeHagar/plexgo/internal/utils"
-	"github.com/LukeHagar/plexgo/types"
+	"github.com/unfaiyted/plexgo/internal/utils"
+	"github.com/unfaiyted/plexgo/types"
 	"net/http"
 )
 

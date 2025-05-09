@@ -93,12 +93,12 @@ func (c *sdkConfiguration) GetURIRoot(machineIdentifer string) (string) {
 // | --------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
 // | Python                | [GitHub](https://github.com/unfaiyted/plexpy)     | [PyPI](https://pypi.org/project/plex-api-client/)                                                | -                                                       |
 // | JavaScript/TypeScript | [GitHub](https://github.com/unfaiyted/plexjs)     | [NPM](https://www.npmjs.com/package/@lukehagar/plexjs) \ [JSR](https://jsr.io/@lukehagar/plexjs) | -                                                       |
-// | Go                    | [GitHub](https://github.com/unfaiyted/plexgo)     | [Releases](https://github.com/LukeHagar/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/LukeHagar/plexgo) |
-// | Ruby                  | [GitHub](https://github.com/unfaiyted/plexruby)   | [Releases](https://github.com/LukeHagar/plexruby/releases)                                       | -                                                       |
-// | Swift                 | [GitHub](https://github.com/unfaiyted/plexswift)  | [Releases](https://github.com/LukeHagar/plexswift/releases)                                      | -                                                       |
-// | PHP                   | [GitHub](https://github.com/unfaiyted/plexphp)    | [Releases](https://github.com/LukeHagar/plexphp/releases)                                        | -                                                       |
-// | Java                  | [GitHub](https://github.com/unfaiyted/plexjava)   | [Releases](https://github.com/LukeHagar/plexjava/releases)                                       | -                                                       |
-// | C#                    | [GitHub](https://github.com/unfaiyted/plexcsharp) | [Releases](https://github.com/LukeHagar/plexcsharp/releases)                                     | -
+// | Go                    | [GitHub](https://github.com/unfaiyted/plexgo)     | [Releases](https://github.com/unfaiyted/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/unfaiyted/plexgo) |
+// | Ruby                  | [GitHub](https://github.com/unfaiyted/plexruby)   | [Releases](https://github.com/unfaiyted/plexruby/releases)                                       | -                                                       |
+// | Swift                 | [GitHub](https://github.com/unfaiyted/plexswift)  | [Releases](https://github.com/unfaiyted/plexswift/releases)                                      | -                                                       |
+// | PHP                   | [GitHub](https://github.com/unfaiyted/plexphp)    | [Releases](https://github.com/unfaiyted/plexphp/releases)                                        | -                                                       |
+// | Java                  | [GitHub](https://github.com/unfaiyted/plexjava)   | [Releases](https://github.com/unfaiyted/plexjava/releases)                                       | -                                                       |
+// | C#                    | [GitHub](https://github.com/unfaiyted/plexcsharp) | [Releases](https://github.com/unfaiyted/plexcsharp/releases)                                     | -
 type PlexAPI struct {
 	// Operations against the Plex Media Server System.
 	//

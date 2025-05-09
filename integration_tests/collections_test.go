@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/LukeHagar/plexgo"
-	"github.com/LukeHagar/plexgo/integration_tests/internal"
+	"github.com/unfaiyted/plexgo"
+	"github.com/unfaiyted/plexgo/integration_tests/internal"
 )
 
 func TestCollections_Integration(t *testing.T) {

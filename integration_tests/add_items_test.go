@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/LukeHagar/plexgo/integration_tests/internal"
+	"github.com/unfaiyted/plexgo/integration_tests/internal"
 )
 
 func TestAddToCollection(t *testing.T) {

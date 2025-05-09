@@ -3,3 +3,6 @@
 **/.speakeasy/logs/
 .speakeasy/reports
 # .gitignore
+
+**/.claude/settings.local.json
+.env

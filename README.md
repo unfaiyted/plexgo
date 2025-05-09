@@ -244,6 +244,22 @@ func main() {
 
 * [GetWatchList](docs/sdks/watchlist/README.md#getwatchlist) - Get User Watchlist
 
+### [Collections](docs/collections.md)
+
+* [GetAllCollections](docs/collections.md#getallcollections) - Get All Collections
+* [GetCollection](docs/collections.md#getcollection) - Get Collection
+* [GetCollectionItems](docs/collections.md#getcollectionitems) - Get Collection Items
+* [CreateCollection](docs/collections.md#createcollection) - Create Collection
+* [CreateSmartCollection](docs/collections.md#createsmartcollection) - Create Smart Collection
+* [DeleteCollection](docs/collections.md#deletecollection) - Delete Collection
+* [AddToCollection](docs/collections.md#addtocollection) - Add Items to Collection
+* [RemoveFromCollection](docs/collections.md#removefromcollection) - Remove Items from Collection
+* [UpdateCollectionMode](docs/collections.md#updatecollectionmode) - Update Collection Mode
+* [UpdateCollectionSort](docs/collections.md#updatecollectionsort) - Update Collection Sort
+* [GetCollectionVisibility](docs/collections.md#getcollectionvisibility) - Get Collection Visibility
+* [UpdateCollectionVisibility](docs/collections.md#updatecollectionvisibility) - Update Collection Visibility
+* [UpdateSmartCollection](docs/collections.md#updatesmartcollection) - Update Smart Collection
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -598,6 +614,19 @@ d6 := types.MustDateFromString("2019-01-01") // returns types.Date and panics on
 <!-- End Special Types [types] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
+
+# Integration Tests
+
+This SDK includes integration tests that can be run against a real Plex Media Server. These tests validate the functionality of the SDK against an actual Plex instance.
+
+## Running Integration Tests
+
+1. Navigate to the integration_tests directory
+2. Create a copy of the .env.example file and rename it to .env
+3. Edit the .env file with your Plex server details and token
+4. Run the tests: `go test -v ./...`
+
+See the [integration tests README](integration_tests/README.md) for more details.
 
 # Development
 

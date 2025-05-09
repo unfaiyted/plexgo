@@ -6,10 +6,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/LukeHagar/plexgo/internal/hooks"
-	"github.com/LukeHagar/plexgo/internal/utils"
-	"github.com/LukeHagar/plexgo/models/components"
-	"github.com/LukeHagar/plexgo/retry"
+	"github.com/unfaiyted/plexgo/internal/hooks"
+	"github.com/unfaiyted/plexgo/internal/utils"
+	"github.com/unfaiyted/plexgo/models/components"
+	"github.com/unfaiyted/plexgo/retry"
 	"net/http"
 	"time"
 )
@@ -70,6 +70,10 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 	return ServerList[c.ServerIndex], c.ServerDefaults[c.ServerIndex]
 }
 
+func (c *sdkConfiguration) GetURIRoot(machineIdentifer string) (string) {
+	return fmt.Sprintf("server://%s/com.plexapp.plugins.library", machineIdentifer)
+}
+
 // PlexAPI - Plex-API: An Open API Spec for interacting with Plex.tv and Plex Media Server
 // # Plex Media Server OpenAPI Specification
 //
@@ -83,18 +87,18 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 //
 // ## SDKs
 //
-// The following SDKs are generated from the OpenAPI Specification. They are automatically generated and may not be fully tested. If you find any issues, please open an issue on the [main specification Repository](https://github.com/LukeHagar/plex-api-spec).
+// The following SDKs are generated from the OpenAPI Specification. They are automatically generated and may not be fully tested. If you find any issues, please open an issue on the [main specification Repository](https://github.com/unfaiyted/plex-api-spec).
 //
 // | Language              | Repository                                        | Releases                                                                                         | Other                                                   |
 // | --------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-// | Python                | [GitHub](https://github.com/LukeHagar/plexpy)     | [PyPI](https://pypi.org/project/plex-api-client/)                                                | -                                                       |
-// | JavaScript/TypeScript | [GitHub](https://github.com/LukeHagar/plexjs)     | [NPM](https://www.npmjs.com/package/@lukehagar/plexjs) \ [JSR](https://jsr.io/@lukehagar/plexjs) | -                                                       |
-// | Go                    | [GitHub](https://github.com/LukeHagar/plexgo)     | [Releases](https://github.com/LukeHagar/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/LukeHagar/plexgo) |
-// | Ruby                  | [GitHub](https://github.com/LukeHagar/plexruby)   | [Releases](https://github.com/LukeHagar/plexruby/releases)                                       | -                                                       |
-// | Swift                 | [GitHub](https://github.com/LukeHagar/plexswift)  | [Releases](https://github.com/LukeHagar/plexswift/releases)                                      | -                                                       |
-// | PHP                   | [GitHub](https://github.com/LukeHagar/plexphp)    | [Releases](https://github.com/LukeHagar/plexphp/releases)                                        | -                                                       |
-// | Java                  | [GitHub](https://github.com/LukeHagar/plexjava)   | [Releases](https://github.com/LukeHagar/plexjava/releases)                                       | -                                                       |
-// | C#                    | [GitHub](https://github.com/LukeHagar/plexcsharp) | [Releases](https://github.com/LukeHagar/plexcsharp/releases)                                     | -
+// | Python                | [GitHub](https://github.com/unfaiyted/plexpy)     | [PyPI](https://pypi.org/project/plex-api-client/)                                                | -                                                       |
+// | JavaScript/TypeScript | [GitHub](https://github.com/unfaiyted/plexjs)     | [NPM](https://www.npmjs.com/package/@lukehagar/plexjs) \ [JSR](https://jsr.io/@lukehagar/plexjs) | -                                                       |
+// | Go                    | [GitHub](https://github.com/unfaiyted/plexgo)     | [Releases](https://github.com/LukeHagar/plexgo/releases)                                         | [GoDoc](https://pkg.go.dev/github.com/LukeHagar/plexgo) |
+// | Ruby                  | [GitHub](https://github.com/unfaiyted/plexruby)   | [Releases](https://github.com/LukeHagar/plexruby/releases)                                       | -                                                       |
+// | Swift                 | [GitHub](https://github.com/unfaiyted/plexswift)  | [Releases](https://github.com/LukeHagar/plexswift/releases)                                      | -                                                       |
+// | PHP                   | [GitHub](https://github.com/unfaiyted/plexphp)    | [Releases](https://github.com/LukeHagar/plexphp/releases)                                        | -                                                       |
+// | Java                  | [GitHub](https://github.com/unfaiyted/plexjava)   | [Releases](https://github.com/LukeHagar/plexjava/releases)                                       | -                                                       |
+// | C#                    | [GitHub](https://github.com/unfaiyted/plexcsharp) | [Releases](https://github.com/LukeHagar/plexcsharp/releases)                                     | -
 type PlexAPI struct {
 	// Operations against the Plex Media Server System.
 	//
@@ -154,7 +158,13 @@ type PlexAPI struct {
 	// Updates to the status can be observed via the Event API.
 	//
 	Updater *Updater
-	Users   *Users
+	// API Calls that perform operations with Plex Media Server Users
+	//
+	Users *Users
+	// Collections are groupings of media items in a library. They can be regular (manually curated) or smart (based on filters).
+	// Collections support different view modes and sort orders, and can have visibility settings for library, home, and shared users.
+	//
+	Collections *Collections
 
 	sdkConfiguration sdkConfiguration
 }
@@ -301,7 +311,7 @@ func New(opts ...SDKOption) *PlexAPI {
 			OpenAPIDocVersion: "0.0.3",
 			SDKVersion:        "0.21.2",
 			GenVersion:        "2.597.9",
-			UserAgent:         "speakeasy-sdk/go 0.21.2 2.597.9 0.0.3 github.com/LukeHagar/plexgo",
+			UserAgent:         "speakeasy-sdk/go 0.21.2 2.597.9 0.0.3 github.com/unfaiyted/plexgo",
 			ServerDefaults: []map[string]string{
 				{
 					"protocol": "https",
@@ -361,6 +371,8 @@ func New(opts ...SDKOption) *PlexAPI {
 	sdk.Updater = newUpdater(sdk.sdkConfiguration)
 
 	sdk.Users = newUsers(sdk.sdkConfiguration)
+
+	sdk.Collections = newCollections(sdk.sdkConfiguration)
 
 	return sdk
 }

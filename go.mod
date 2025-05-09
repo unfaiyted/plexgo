@@ -1,4 +1,4 @@
-module github.com/LukeHagar/plexgo
+module github.com/unfaiyted/plexgo
 
 go 1.20
 
